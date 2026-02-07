@@ -65,6 +65,12 @@
   background: rgba(139, 92, 246, 0.15);
 }
 
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .phone {
   font-weight: 500;
   color: var(--color-text-muted);
@@ -99,30 +105,144 @@
   font-size: 0.9em;
 }
 
+/* Hamburger — виден только на мобильных */
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-button);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.burger:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--color-text-muted);
+}
+
+.burgerLine {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.burgerLine:nth-child(1) {
+  transform: translateY(-5px);
+}
+
+.burgerLine:nth-child(2) {
+  transform: translateY(0);
+}
+
+.burgerLine:nth-child(3) {
+  transform: translateY(5px);
+}
+
+.burger[aria-expanded="true"] .burgerLine:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] .burgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[aria-expanded="true"] .burgerLine:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+
+/* Оверлей меню */
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  padding-top: 5rem;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  background: var(--color-bg);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  overflow-y: auto;
+}
+
+.menuOverlayOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuNav {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.menuLink {
+  display: block;
+  padding: 1rem 0;
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-text);
+  transition: color 0.2s;
+}
+
+.menuLink:hover {
+  color: var(--color-accent);
+}
+
+.menuLinkActive {
+  color: var(--color-primary);
+}
+
+/* Адаптив: на мобильных скрываем десктоп-нав, показываем бургер */
 @media (max-width: 767px) {
   .wrapper {
     padding: 0.75rem;
   }
 
   .header {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     border-radius: var(--radius-card);
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: nowrap;
   }
 
   .nav {
-    order: 3;
-  }
-
-  .navList {
-    justify-content: flex-start;
+    display: none;
   }
 
   .right {
+    margin-left: auto;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .burger {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  .menuOverlay {
+    display: none;
   }
 }

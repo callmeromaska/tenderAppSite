@@ -35,6 +35,12 @@ export function CustomCursor() {
 
   useEffect(() => {
     if (!enabled) return;
+    document.body.setAttribute('data-custom-cursor', 'true');
+    return () => document.body.removeAttribute('data-custom-cursor');
+  }, [enabled]);
+
+  useEffect(() => {
+    if (!enabled) return;
 
     const handleMove = (e: MouseEvent) => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
