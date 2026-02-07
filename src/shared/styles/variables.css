@@ -1,0 +1,42 @@
+:root {
+  --color-primary: #1a365d;
+  --color-primary-hover: #2c5282;
+  --color-primary-active: #2b6cb0;
+  --color-accent: #ed8936;
+  --color-accent-hover: #dd6b20;
+  --color-accent-active: #c05621;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f7fafc;
+  --color-surface: #edf2f7;
+  --color-text: #1a202c;
+  --color-text-muted: #4a5568;
+  --color-text-light: #718096;
+  --color-border: #e2e8f0;
+  --color-border-focus: var(--color-primary);
+  --color-success: #38a169;
+  --color-error: #e53e3e;
+  --color-warning: #d69e2e;
+
+  --font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-family-heading: "Inter", sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  --container-max: 1200px;
+  --container-padding: 1rem;
+  --container-padding-md: 1.5rem;
+  --container-padding-lg: 2rem;
+  --gap-section: 3rem;
+  --gap-block: 1.5rem;
+  --radius-button: 8px;
+  --radius-card: 12px;
+}

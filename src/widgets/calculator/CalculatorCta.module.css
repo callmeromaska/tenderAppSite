@@ -1,0 +1,29 @@
+.section {
+  padding: var(--gap-section) 0;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  text-align: center;
+}
+
+.heading {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
