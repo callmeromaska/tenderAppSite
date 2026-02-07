@@ -7,7 +7,7 @@
 .label {
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-text-muted);
 }
 
 .select {
@@ -15,18 +15,19 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-button);
   font-size: var(--text-base);
-  background: var(--color-bg);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
   cursor: pointer;
 }
 
 .select:hover {
-  border-color: var(--color-text-light);
+  border-color: var(--color-border-strong);
 }
 
 .select:focus {
   outline: none;
-  border-color: var(--color-border-focus);
-  box-shadow: 0 0 0 2px rgba(26, 54, 93, 0.2);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
 }
 
 .select.hasError {

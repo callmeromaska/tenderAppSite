@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { heroContent } from '@/shared/content/home';
-import { Button } from '@/shared/ui/Button/Button';
 import { Card } from '@/shared/ui/Card/Card';
 import styles from './Hero.module.css';
 
@@ -8,6 +7,7 @@ export function Hero() {
   const { title, subtitle, badges, cards, blocks } = heroContent;
   return (
     <section className={styles.hero} aria-label="Главный экран">
+    <div className={styles.gradientBlock}>
       <div className={styles.container}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
@@ -27,14 +27,16 @@ export function Hero() {
             </div>
           ))}
         </div>
-        <div className={styles.cta}>
-          <Link to="/contacts">
-            <Button variant="secondary" size="lg">
-              Связаться
-            </Button>
+        <div className={styles.ctas}>
+          <Link to="/contacts" className={styles.ctaPrimary}>
+            Связаться с нами
+          </Link>
+          <Link to="/calculator" className={styles.ctaSecondary}>
+            Калькулятор
           </Link>
         </div>
       </div>
+    </div>
     </section>
   );
 }

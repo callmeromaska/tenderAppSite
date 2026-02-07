@@ -1,5 +1,6 @@
 .section {
   padding: var(--gap-section) 0;
+  background: var(--color-bg);
 }
 
 .container {
@@ -10,10 +11,11 @@
 }
 
 .heading {
-  font-size: var(--text-3xl);
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: var(--color-text);
+  letter-spacing: -0.02em;
 }
 
 .subtitle {

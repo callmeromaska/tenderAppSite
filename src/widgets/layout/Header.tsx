@@ -11,8 +11,8 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
+    <div className={styles.wrapper}>
+      <header className={styles.header}>
         <Link to="/" className={styles.logo}>
           ЭлектроМонтаж
         </Link>
@@ -33,10 +33,15 @@ export function Header() {
             ))}
           </ul>
         </nav>
-        <a href="tel:+77714215593" className={styles.phone}>
-          +7 771 421 55 93
-        </a>
-      </div>
-    </header>
+        <div className={styles.right}>
+          <a href="tel:+77714215593" className={styles.phone}>
+            +7 771 421 55 93
+          </a>
+          <Link to="/contacts" className={styles.cta}>
+            Связаться
+          </Link>
+        </div>
+      </header>
+    </div>
   );
 }

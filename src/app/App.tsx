@@ -6,10 +6,12 @@ import { PricesPage } from '@/pages/PricesPage';
 import { ContactsPage } from '@/pages/ContactsPage';
 import { CalculatorPage } from '@/pages/CalculatorPage';
 import { ToastProvider } from '@/features/toast/ToastProvider';
+import { CustomCursor } from '@/shared/ui/CustomCursor/CustomCursor';
 
 export function App() {
   return (
     <BrowserRouter>
+      <CustomCursor />
       <ToastProvider>
         <Layout>
           <Routes>

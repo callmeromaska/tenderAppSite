@@ -1,28 +1,32 @@
 # UI Style Guide — электромонтаж.kz
 
+Редизайн в стиле Evervault: минимализм, технологичность, синий акцент.
+
 ## Цветовая палитра
 
 ```css
-/* Основные */
---color-primary: #1a365d;        /* тёмно-синий, акцент бренда */
---color-primary-hover: #2c5282;
---color-primary-active: #2b6cb0;
+/* Основные / акцент (Evervault-style blue) */
+--color-primary: #0a66c2;
+--color-primary-hover: #004182;
+--color-primary-active: #003366;
+--color-accent: #0a66c2;
 
---color-accent: #ed8936;         /* оранжевый, энергия/огонь */
---color-accent-hover: #dd6b20;
---color-accent-active: #c05621;
+/* Тёмные секции (hero, footer) */
+--color-dark: #0a0a0f;
+--color-dark-text: #fafafa;
 
 /* Нейтральные */
 --color-bg: #ffffff;
---color-bg-alt: #f7fafc;
---color-surface: #edf2f7;
-
---color-text: #1a202c;
---color-text-muted: #4a5568;
---color-text-light: #718096;
-
---color-border: #e2e8f0;
---color-border-focus: var(--color-primary);
+--color-bg-alt: #fafafa;
+--color-surface: #f5f5f7;
+--color-text: #0a0a0f;
+--color-text-muted: #6b7280;
+--color-text-light: #9ca3af;
+--color-border: #e5e7eb;
+--color-border-focus: #0a66c2;
+--shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+--radius-button: 10px;
+--radius-card: 16px;
 
 /* Семантика */
 --color-success: #38a169;

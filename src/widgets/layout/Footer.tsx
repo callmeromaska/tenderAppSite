@@ -33,9 +33,12 @@ export function Footer() {
             </Link>
           </div>
         </div>
-        <p className={styles.copyright}>
-          © {new Date().getFullYear()} ЭлектроМонтаж. Энергия ваших проектов.
-        </p>
+        <div className={styles.bottom}>
+          <span className={styles.copyright}>
+            © {new Date().getFullYear()} ЭлектроМонтаж. Энергия ваших проектов.
+          </span>
+          <span className={styles.status}>Все системы в норме</span>
+        </div>
       </div>
     </footer>
   );

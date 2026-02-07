@@ -1,6 +1,6 @@
 .section {
   padding: var(--gap-section) 0;
-  background: var(--color-bg-alt);
+  background: var(--color-bg);
 }
 
 .container {
@@ -10,10 +10,11 @@
 }
 
 .heading {
-  font-size: var(--text-3xl);
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   color: var(--color-text);
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
@@ -25,14 +26,14 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .block {
@@ -45,6 +46,8 @@
   font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .value {
@@ -53,7 +56,7 @@
 }
 
 .value[href]:hover {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 .social {
@@ -65,6 +68,7 @@
 .socialLink {
   color: var(--color-accent);
   font-weight: 500;
+  font-size: var(--text-sm);
 }
 
 .socialLink:hover {
@@ -72,7 +76,11 @@
 }
 
 .formWrap {
-  max-width: 400px;
+  max-width: 420px;
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
 }
 
 @media (max-width: 767px) {
